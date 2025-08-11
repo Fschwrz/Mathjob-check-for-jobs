@@ -9,7 +9,7 @@ KEYWORDS_YES_NECESSARY = ["categor","Categor","homotop","Homotop","topolog","Top
 KEYWORDS_NO = ["PhD position","PhD Position","phd position"] #If these keywords are contained, disregard the listing
 KEYWORDS_YES_OVERWRITE = ["postdoc","Postdoc"] # If these keywords are contained, take the listing, even if words from KEYWORDS_NO are contained
 FILE_PATH = "/home/florian/Dokumente/python_projects/mathjob_check_files/job-search.csv"
-KILL_MODE = False #In kill mode all previous listings are overwritten
+KILL_MODE = False #In kill mode all previous listings are overwritten, generally I recommend to have it on "False"
 
 
 if KILL_MODE:
