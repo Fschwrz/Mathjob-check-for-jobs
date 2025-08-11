@@ -19,7 +19,13 @@ if KILL_MODE:
 
 #Gets the list of IDs already in the CSV document
 list_ids_already_there = []
-f = open(FILE_PATH, "r")
+try:
+    f = open(FILE_PATH, "r")
+except:
+    print("No File found at the path. A new file is created.")
+    f = open(FILE_PATH, "w")
+    f.close
+    f = open(FILE_PATH, "r")
 while True:
     line_read = f.readline()
     if line_read == "":
@@ -60,6 +66,7 @@ for entry in NewsFeed.entries:
 print("New jobs found: " + str(len(listofjobs)))
 
 #Writes the list of jobs into the CSV document
+
 f = open(FILE_PATH, "a")
 for line in listofjobs:
     f.write(line+ "\n")
