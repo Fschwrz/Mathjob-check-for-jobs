@@ -2,12 +2,13 @@ import feedparser
 import tkinter as tk
 from tkinter import ttk
 
+#This short skript seaches for suitable jobs on Mathjobs and writes them into the csv file described in FILE_PATH
 
 ACCEPTABLE_COUNTRIES = ["DE", "NL", "NO", "SE", "DK", "CH", "BE", "LU", "FR", "PL", "EE", "LV", "LT", "CZ", "HU", "GB", "FI"]
-FILE_PATH = "/home/florian/Dokumente/python_projects/mathjob_check_files/test.csv"
-KEYWORDS_YES_NECESSARY = ["categor","Categor","homotop","Homotop","topolog","Topolog","mathematical physics","quantum","decarbonisation","decarbonization","greenhouse","climate","electricity"]
-KEYWORDS_NO = ["PhD position","PhD Position","phd position"]
-KEYWORDS_YES_OVERWRITE = ["postdoc","Postdoc"]
+KEYWORDS_YES_NECESSARY = ["categor","Categor","homotop","Homotop","topolog","Topolog","mathematical physics","quantum","decarbonisation","decarbonization","greenhouse","climate","electricity","power"]
+KEYWORDS_NO = ["PhD position","PhD Position","phd position"] #If these keywords are contained, disregard the listing
+KEYWORDS_YES_OVERWRITE = ["postdoc","Postdoc"] # If these keywords are contained, take the listing, even if words from KEYWORDS_NO are contained
+FILE_PATH = "/home/florian/Dokumente/python_projects/mathjob_check_files/job-search.csv"
 KILL_MODE = False #In kill mode all previous listings are overwritten
 
 
